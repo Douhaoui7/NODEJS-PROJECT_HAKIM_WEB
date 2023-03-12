@@ -9,19 +9,19 @@ const p = path.join(
 
 module.exports = class Cart {
   static addProduct(id, productPrice) {
-    // Fetch the previous cart
+    // Récupérer le panier précédant
     fs.readFile(p, (err, fileContent) => {
       let cart = { products: [], totalPrice: 0 };
       if (!err) {
         cart = JSON.parse(fileContent);
       }
-      // Analyze the cart => Find existing product
+      // Analyser le panier => Puis ficher les produits existants
       const existingProductIndex = cart.products.findIndex(
         prod => prod.id === id
       );
       const existingProduct = cart.products[existingProductIndex];
       let updatedProduct;
-      // Add new product/ increase quantity
+      // Ajouter le produit / + incrémenter la quantité de 1 (à chaque ajout du même produit)
       if (existingProduct) {
         updatedProduct = { ...existingProduct };
         updatedProduct.qty = updatedProduct.qty + 1;
@@ -72,4 +72,3 @@ module.exports = class Cart {
     });
   }
 };
-
