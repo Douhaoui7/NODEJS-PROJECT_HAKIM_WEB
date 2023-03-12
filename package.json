@@ -21,6 +21,7 @@
     "express-handlebars": "^7.0.1",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
+    "jquery": "^3.6.4",
     "pug": "^3.0.2"
   }
 }
