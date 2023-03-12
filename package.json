@@ -1,0 +1,26 @@
+{
+  "name": "hakim_nodejs_project",
+  "version": "1.0.0",
+  "description": "hakim_nodejs_project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "author": "Hakim Douhaoui",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "browser-sync": "^2.28.3",
+    "ejs": "^3.1.8",
+    "express": "^4.16.3",
+    "express-handlebars": "^7.0.1",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "pug": "^3.0.2"
+  }
+}
